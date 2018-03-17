@@ -15,7 +15,7 @@ import Forestplot as flt
 
 model_estimate = pd.read_csv('directory/model_estimate.csv')
 reported_estimate = pd.read_csv('directory/reported_estimate.csv')
-text = pd.read_csv('directory/Text.csv')
+text = pd.read_csv('directory/text.csv')
 
 # Create Forest plot
 
