@@ -1,0 +1,48 @@
+Forest plot
+
+A forest plot is a graphical display of estimated results from a number of scientific studies addressing the same question, along with the overall results.
+It was developed for use in medical research as a means of graphically representing a meta-analysis of the results of randomized controlled trials. 
+
+Parameters
+
+The parameters and their descriptions are listed below - 
+
+Note - Only the model_estimate and text parameters are mandatory. Other parameters are optional.
+
+ 1. model_estimate - Model whose forest plot is to be made.
+                     Should be a dataframe with column names as Study,value1,value2,mean and weight (weight column is optional).
+                     Study - name of the Studies done.
+                     value1 - lower limit of forest plot.
+                     value2 - upper limit of forest plot.
+                     mean - mean value or position of model estimates.
+                     weight - weight of the Studies done (optional)
+
+ 2. text - Data to be represented in tabular form - Should be a dataframe with column names as text,info,O1 and O2 (O1 and O2 are Optional).
+           text - column1 header of the table and name of Studies.
+           info - data about the mean,lower and upper limits of forest plot.
+           O1 and O2 are treatment and control group ratios.
+
+ 3. save_location - Location and name of the forestplot to be saved (default - saves as png file with the name 'forestplot' in the working directory).
+
+ 4. zero - Location of the null line (default - 1).
+
+ 5. clip - Limit after which the line is to be clipped into arrow. Should be a list - [lower_clip_limit, upper_clip_limit] (default - [0,10]).
+
+ 6. xlab - Label for the x-axis (default - Lab)
+
+ 7. colour - Set the colors for all the elements. Should be a list - [model_estimate_colour,reported_estimate_colour] (default - ['b','r']).
+
+ 8. x_scale - Set the scaling of the x-axis (default - 'linear').
+
+ 9. title - Title of the forest plot (default - '').
+
+ 10. grid - To add grids to the forest plot if required (default - False).
+
+ 11. is_summary - To select whether the table is to be viewed along with the plot (default - False).
+
+ 12. fontsize - Set the font size of the data displayed in the table (default - 14).
+
+ 13. dpi - Set the resolution of the forest plot being saved (default - 500)
+
+ 14. reported_estimate - Reported estimate for model whose forest plot is to be made.
+                         Should be a dataframe with column names as Study,value1,value2,mean and weight (weight column is optional). (default - pd.DataFrame()).
